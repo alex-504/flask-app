@@ -10,3 +10,6 @@ This application demonstrates basic usage of Flask, including defining routes, h
 
 3.**Next ("New features")**
 As I explore the Flask doc, I will be adding more features, and perhaps use this app to learn deployment and orchestration tools"
+
+4.**April, 14**
+Add CRUD methods.
