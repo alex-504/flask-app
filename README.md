@@ -1,4 +1,4 @@
-5. **Running app:**
+**Running app:**
 - Create the environment: 
   ```
   $ mkdir myproject
