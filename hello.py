@@ -59,6 +59,7 @@ def hello(name=None):
         {'href': '#about', 'caption': 'About'},
         {'href': '#contact', 'caption': 'Contact'},
         {'href': url_for('portfolio'), 'caption': 'Portfolio'},
+        {'href': url_for('ninja'), 'caption': 'Ninja'},
     ]
     a_variable = f"Hello, {name}!" if name else "Welcome to My Webpage!"
 
@@ -90,3 +91,27 @@ def portfolio():
         }
     ]
     return render_template('portfolio.html', cards=cards)
+
+@app.route('/ninja/')
+def ninja():
+    jiraiya_facts = [
+        {
+            'title': 'Legendary Sannin',
+            'description': 'Jiraiya is one of the Legendary Sannin, a group of three powerful ninjas trained by the Third Hokage, Hiruzen Sarutobi.'
+        },
+        {
+            'title': 'Author of Icha Icha',
+            'description': 'Jiraiya is the author of the popular adult book series "Icha Icha," which is often read by Kakashi Hatake.'
+        },
+        {
+            'title': 'Mentor to Naruto Uzumaki',
+            'description': 'Jiraiya served as a mentor to Naruto Uzumaki, helping him learn powerful techniques like the Rasengan and summoning jutsu.'
+        },
+        {
+            'title': 'Toad Sage',
+            'description': 'Jiraiya was known as the Toad Sage because of his ability to summon toads and his mastery of Sage Mode, taught to him by the Great Toad Sage in Mount Myoboku.'
+        }
+    ]
+
+    # Render the ninja.html template and pass the facts to it
+    return render_template('ninja.html', facts=jiraiya_facts)  # Render the first fact as an example
