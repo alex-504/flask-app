@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ninja Facts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .fact-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            padding: 20px;
+            width: 60%;
+        }
+        .fact-card h3 {
+            margin: 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ddd;
+        }
+        .fact-card p {
+            margin: 10px 0;
+            font-size: 1.1em;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Facts About Jiraiya</h1>
+    <div class="fact-card">
+      {% for fact in facts %}
+          <h3>{{ fact.title }}</h3>
+          <p>{{ fact.description }}</p>
+      {% endfor %}
+  </div>
+</body>
+</html>
